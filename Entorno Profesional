@@ -6,6 +6,14 @@
 # Bien, ahora vamos a descargar un repositorio de github que nos hará casi todo el trabajo. 
 git clone https://github.com/gh0stzk/dotfiles
 
+# Descargamos nuestro fondo de pantalla
+# Tengo un repositorio el cual tiene wallpapers ahí dentro, clónalo y podrás poner el que tú quieras.
+git clone https://github.com/Aussterben/wallpapers.git
+# Elegimos el que más nos guste y abrimos el gestor de archivos o directamente desde la terminal
+# Terminal:
+cp /home/(nuestro nombre)/wallpapers/(selecionamos el que queremos) .config/bspwm/rices/(el bspwm que hemos puesto)/walls
+# Una vez hecho eso, simplemente presionamos "alt+win+w" y seleccionamos el que queremos (normalmente suele ser el último fondo)
+
 # Una vez descargado, vamos a instalar de nuevo .zshrc, ya que el que nos viene por defecto, da muchos errores a la hora de poner la powerlevel10k.
 uninstall_oh_my_zsh
 rm -rf ~/.oh-my-zsh
@@ -27,11 +35,30 @@ context
 command_execution_time
 status
 
+# Ahora, simplemente buscamos la línea "typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(". Ahí vamos a borrar todo hasta que veamos un ")". Ahí paramos.
+
 # Instalamos zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
 nano ~/.zshrc
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Retocamos la polybar
+# Tened en cuenta que el bspwm por defecto viene el de emilia. Para cambiar el bspwm simplemente tocamos "alt+espacio" y elegimos el que queremos.
+# Una vez hayamos elegido uno, por ejemplo, el de pamela. Ahora nos vamos al siguiente directorio.
 
-# Ahora, simplemente buscamos la línea "typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(". Ahí vamos a borrar todo hasta que veamos un ")". Ahí paramos.
+cd .config/bspwm/rices/pamela
+
+# abrimos el archivo "modules.ini".
+
+nano modules.ini
+
+# Aquí retocamos lo que queramos. Por ejemplo, yo voy a retocar el símbolo de arch que viene arriba a la izquierda.
+# Buscamos lo siguiente
+[module/launcher}
+
+# lo buscamos hasta que nos salga label = "󰣇" (el logo de arch).
+# Si queremos cambiar el logo y poner cualquier otro, solamente nos venimos a esta página y buscamos el que queremos
+https://www.nerdfonts.com/cheat-sheet
+
+# Solo copias y pegas
 # Y listo, ya tenemos todo configurado. Si no ha quedado claro, no te preocupes, haré un tutorial para youtube próximamente. (Cuando lo saque, lo pondré aquí).
