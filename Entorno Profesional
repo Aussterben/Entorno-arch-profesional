@@ -1,0 +1,31 @@
+# Cosas necesarias
+# Una de las cosas necesarias será descargar arch, da igual la distro. Yo personalmente uso ArchCraft y va muy bien (muy recomendado).
+# Una vez descargado el sistema operativo, vamos con el siguiente paso.
+
+# Auto-bspwm
+# Bien, ahora vamos a descargar un repositorio de github que nos hará casi todo el trabajo. 
+git clone https://github.com/gh0stzk/dotfiles
+
+# Una vez descargado, vamos a instalar de nuevo .zshrc, ya que el que nos viene por defecto, da muchos errores a la hora de poner la powerlevel10k.
+uninstall_oh_my_zsh
+rm -rf ~/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Instalamos powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+
+# Una vez instalado, nos metermos en el .zshrc con el comando
+nano .zshrc
+
+# Aquí editaremos el "ZSH_THEME". Nos pondrá algo como "Agnoster" o algo así, pero quitaremos eso y pondremos ZSH_THEME="powerlevel10k/powerlevel10k"
+# Al reiniciar la terminal, nos saldrá un menú, ahí elegimos como lo queremos, siguiendo como nos lo indica la powerlevel10k.
+# Una vez instalado todo, nos meteremos al archivo de la powerlevel10k para editarlo un poco, ya que viene muy fea por defecto. Si te fijas, al instalarlo, a la derecha te salen cosas que si no te interesan, las puedes quitar.
+nano .p10k.zsh
+
+# Al bajar un poco, nos aparecerá "os_icon, dir, vcs y # prompt_char". Bien, debajo de "dir" añadiremos lo siguiente
+context
+command_execution_time
+status
+
+# Ahora, simplemente buscamos la línea "typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(". Ahí vamos a borrar todo hasta que veamos un ")". Ahí paramos.
+# Y listo, ya tenemos todo configurado. Si no ha quedado claro, no te preocupes, haré un tutorial para youtube próximamente. (Cuando lo saque, lo pondré aquí).
