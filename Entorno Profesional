@@ -42,6 +42,18 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh
 nano ~/.zshrc
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Retocamos el picom.conf
+nano .config/bspwm/picom.conf
+
+# Bajamos y buscamos "Fading"
+fading = false;
+
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+fade-delta = 8
+
+# Esos son mis ajustes. Lo que hace el Fading es básicamente que la animación al abrir la terminal sea más lenta y visible. Si quieres ponerle que dure más o que dure menos, tenéis que editar "fade-delta".
+
 # Retocamos la polybar
 # Tened en cuenta que el bspwm por defecto viene el de emilia. Para cambiar el bspwm simplemente tocamos "alt+espacio" y elegimos el que queremos.
 # Una vez hayamos elegido uno, por ejemplo, el de pamela. Ahora nos vamos al siguiente directorio.
