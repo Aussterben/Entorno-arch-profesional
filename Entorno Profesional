@@ -74,3 +74,10 @@ https://www.nerdfonts.com/cheat-sheet
 
 # Solo copias y pegas
 # Y listo, ya tenemos todo configurado. Si no ha quedado claro, no te preocupes, haré un tutorial para youtube próximamente. (Cuando lo saque, lo pondré aquí).
+
+-----------------
+
+# Solución de errores.
+
+Si te sale un error como "powerlevel10k not found", solamente pon esto.
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k     
