@@ -6,3 +6,5 @@ powerlevel10k: https://github.com/romkatv
 
 PD: Los wallpapers se encuentran en otro repositorio mío, aquí les dejo el link:
 https://github.com/Aussterben/wallpapers
+
+Tutorial: https://www.youtube.com/watch?v=y-ifMKhtk4A&t=1179s
